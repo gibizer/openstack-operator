@@ -11,6 +11,10 @@
     {
       "matchPackageNames": ["github.com/openstack-k8s-operators/openstack-operator/apis"],
       "enabled": false
+    },
+    {
+      "matchPackageNames": ["!!!openstack-operator-dev-preview2"],
+      "enabled": false
     }
   ],
   "postUpgradeTasks": {
