@@ -1,6 +1,6 @@
 {
   "extends": [
-    "github>openstack-k8s-operators/renovate-config:dev-preview2.json"
+    "github>gibizer/renovate-config:dev-preview2.json"
   ],
   "constraints": {
     "go": "1.19"
