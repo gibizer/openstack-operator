@@ -1,6 +1,6 @@
 {
   "extends": [
-    "github>openstack-k8s-operators/renovate-config:stable.json5"
+    "github>gibizer/renovate-config:stable.json5"
   ],
   "baseBranches": ["main"],
   "useBaseBranchConfig": "merge",
