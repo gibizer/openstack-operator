@@ -8,9 +8,9 @@ require (
 	github.com/onsi/ginkgo/v2 v2.20.1
 	github.com/onsi/gomega v1.34.1
 	github.com/openstack-k8s-operators/barbican-operator/api v0.5.1-0.20241106125449-336a1272b72d
-	github.com/openstack-k8s-operators/cinder-operator/api v0.5.1-0.20241105203529-54d6e95bfea0
+	github.com/openstack-k8s-operators/cinder-operator/api v0.5.1-0.20241111103512-0399189684c4
 	github.com/openstack-k8s-operators/designate-operator/api v0.5.1-0.20241030162909-74f95be0e33d
-	github.com/openstack-k8s-operators/glance-operator/api v0.5.1-0.20241106125206-c0c082831d2f
+	github.com/openstack-k8s-operators/glance-operator/api v0.5.1-0.20241111115224-a936530ab1c4
 	github.com/openstack-k8s-operators/heat-operator/api v0.5.1-0.20241106151755-ef5117fab12a
 	github.com/openstack-k8s-operators/horizon-operator/api v0.5.1-0.20241106121620-a53c18db80aa
 	github.com/openstack-k8s-operators/infra-operator/apis v0.5.1-0.20241106062833-6ba8f6c612c7
@@ -20,7 +20,7 @@ require (
 	github.com/openstack-k8s-operators/lib-common/modules/storage v0.5.1-0.20241104140916-71a0e9d9766d
 	github.com/openstack-k8s-operators/manila-operator/api v0.5.1-0.20241106152337-61488e9159ce
 	github.com/openstack-k8s-operators/mariadb-operator/api v0.5.1-0.20241106141725-340c4d78fef0
-	github.com/openstack-k8s-operators/neutron-operator/api v0.5.1-0.20241106150939-8108068a452f
+	github.com/openstack-k8s-operators/neutron-operator/api v0.5.1-0.20241107080145-5c05397cec75
 	github.com/openstack-k8s-operators/nova-operator/api v0.5.1-0.20241105105110-d4bfa598cee7
 	github.com/openstack-k8s-operators/octavia-operator/api v0.5.1-0.20241105111556-f9cd9b8eefed
 	github.com/openstack-k8s-operators/openstack-baremetal-operator/api v0.5.1-0.20241030042838-d69076bd6a9d
