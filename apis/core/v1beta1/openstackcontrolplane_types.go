@@ -128,6 +128,11 @@ type OpenStackControlPlaneSpec struct {
 
 	// +kubebuilder:validation:Optional
 	// +operator-sdk:csv:customresourcedefinitions:type=spec
+	// NotificationsBusSection - Parameters related to the Notifications Bus services
+	NotificationsBus NotificationsBusSection `json:"notificationsBus,omitempty"`
+
+	// +kubebuilder:validation:Optional
+	// +operator-sdk:csv:customresourcedefinitions:type=spec
 	// Memcached - Parameters related to the Memcached service
 	Memcached MemcachedSection `json:"memcached,omitempty"`
 
@@ -484,8 +489,21 @@ type RabbitmqSection struct {
 
 	// +kubebuilder:validation:Optional
 	// +operator-sdk:csv:customresourcedefinitions:type=spec
-	// Templates - Overrides to use when creating the Rabbitmq clusters
+	// Templates - Overrides to use when creating the Rabbitmq clusters for RPC and (optionally) Notifications.
 	Templates *map[string]rabbitmqv1.RabbitMqSpecCore `json:"templates"`
+}
+
+// NotificationsBusSection defines the desired state of AMQP messaging Bus Services for producers and consumers of notifications
+type NotificationsBusSection struct {
+	// +kubebuilder:validation:Optional
+	// RabbitMQCluster is the name of RabbitMQ Cluster CR to select a Messages
+	// Bus Service instance used by all services that produce or consume notifications.
+	// Avoid colocating it with RabbitMQ services used for PRC.
+	// That instance will be pushed down for services, unless overriden in templates.
+	// An empty value leaves the notification drivers of all services unconfigured and emitting no notifications at all.
+	// When undefined, no configuration will be pushed down for services, which provides backward compatibility during upgrades,
+	// and leaves a possibility for each service to override the configuration, or disable notifications only for itself.
+	RabbitMQCluster *string `json:"rabbitMQCluster,omitempty"`
 }
 
 // MemcachedSection defines the desired state of Memcached services
